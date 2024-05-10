@@ -28,16 +28,22 @@ def metricpick():
 
 def main():
     welcom()
-    metricpick()
     recipe_name = input("Enter recipe name: ")
     serving_size = input("Enter serving size: ")
     print(f"Recipe: {recipe_name}, serving size: {serving_size}")
+    total_cost = 0
+    ingredients = []
     while True:
-        ingredient_name = input("Enter ingredient name and when you wan to exit type 'exit' ")
+        ingredient_name = input("Enter ingredient name and when you wan to exit type\
+        'exit' ")
+        unit = metricpick()
+        cost = input(f"Enter cost of {ingredient_name} for {unit} g/ml: ")
+        total_cost += float(cost)
         if ingredient_name == 'exit':
             break 
-        ingredients = []
+
         ingredients.append(ingredient_name)
 
     print(ingredients)
+    print(f"Total cost: {total_cost}")
 main()
