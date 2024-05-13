@@ -36,14 +36,15 @@ def main():
     while True:
         ingredient_name = input("Enter ingredient name and when you wan to exit type\
         'exit' ")
+
+        if ingredient_name == 'exit':
+            break 
         unit = metricpick()
         cost = input(f"Enter cost of {ingredient_name} for {unit} g/ml: ")
         total_cost += float(cost)
-        if ingredient_name == 'exit':
-            break 
-
         ingredients.append(ingredient_name)
 
     print(ingredients)
     print(f"Total cost: {total_cost}")
+    print(f)
 main()
