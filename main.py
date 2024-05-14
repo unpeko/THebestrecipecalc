@@ -46,5 +46,5 @@ def main():
 
     print(ingredients)
     print(f"Total cost: {total_cost}")
-    print(f)
+    print(f"Total cost per serving: {total_cost/float(serving_size)}")
 main()
