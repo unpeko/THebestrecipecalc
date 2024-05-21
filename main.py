@@ -47,7 +47,9 @@ def welcom():
                        and was designed to help users calculate the cost of\
                        cooking recipes. The program was created using the')
 
-
+    else: 
+        easygui.msgbox("Invalid input")
+        welcom()
 def metricpick():
     # author: luka
     # date: 10:10 am, May 15, 2024
