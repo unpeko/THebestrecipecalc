@@ -47,14 +47,16 @@ def welcom():
                        and was designed to help users calculate the cost of\
                        cooking recipes. The program was created using the')
 
-    else: 
+    else:
         easygui.msgbox("Invalid input")
         welcom()
+
+
 def metricpick():
     # author: luka
     # date: 10:10 am, May 15, 2024
     # user welcome
-    # v4
+    # v5
 
     # asks the user if they want to use metric or imperial units
 
@@ -65,14 +67,14 @@ def metricpick():
         if measurment == 'grams':
             amount = easygui.integerbox("Enter amount in grams: ",
                                         '',
-                                        '',
+                                        0,
                                         lowerbound=1,
                                         upperbound=10000)
             return amount, measurment
         elif measurment == 'mililitres':
             amount = easygui.integerbox("Enter amount in milliliters: ",
                                         '',
-                                        '',
+                                        0,
                                         lowerbound=1,
                                         upperbound=10000)
             return amount, measurment
