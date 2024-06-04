@@ -1,6 +1,3 @@
-import math
-from types import ClassMethodDescriptorType
-
 import easygui
 
 
